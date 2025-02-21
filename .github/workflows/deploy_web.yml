@@ -36,5 +36,5 @@ jobs:
           folder: game_of_life_web/www/dist # Dossier généré à partir de main
           clean: true # Nettoie les anciens fichiers
           single-commit: true # Évite les branches intermédiaires
-          force: true # Force le déploiement même s'il n'y a pas de changement détecté
+          force: true # Force le déploiement même s'il n'y a pas de changement détect
 
