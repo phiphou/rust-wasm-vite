@@ -16,8 +16,8 @@ impl Cell {
 }
 
 pub struct Universe {
-    width: u32,
-    height: u32,
+    pub width: u32,
+    pub height: u32,
     pub cells: Vec<Cell>,
 }
 

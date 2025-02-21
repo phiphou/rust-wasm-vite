@@ -86,6 +86,14 @@ impl WasmUniverse {
     pub fn render(&self) -> String {
         self.universe.render()
     }
+
+    pub fn width(&self) -> u32 {
+        self.universe.width
+    }
+
+    pub fn height(&self) -> u32 {
+        self.universe.height
+    }
 }
 
 #[cfg(target_arch = "wasm32")]
