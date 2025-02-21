@@ -1,0 +1,13 @@
+[package]
+name = "calculator_cli"
+edition = "2021"
+version = "0.1.0"
+description = "simple cli tool consuming the `calculator` library package."
+
+[[bin]]
+name = "calc"
+path = "src/main.rs"
+
+[dependencies]
+game_of_life = { version = "0.1.0", path = "../game_of_life" }
+anyhow = "1.0.96"

@@ -1,0 +1,38 @@
+name: Rust
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+on:
+  push:
+    branches: ['main']
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - uses: jetli/wasm-pack-action@v0.4.0
+        with:
+          version: 'latest'
+      - name: Build WASM package
+        run: |
+          cd game_of_life/
+          chmod +x build-wasm.sh
+          ./build-wasm.sh
+      - name: Build static site
+        run: |
+          cd game_of_life_web/www/
+          npm ci
+          npm run build
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: game_of_life_web/www/dist
+          clean: true
+          single-commit: true

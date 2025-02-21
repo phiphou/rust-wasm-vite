@@ -1,0 +1,33 @@
+# Compilation et artefacts de construction
+target/
+**/*.rmeta
+
+# Dépendances de Cargo
+Cargo.lock
+.cargo/
+
+# Fichiers générés par Rust
+**/*.rs.bk
+
+# Fichiers de débogage et logs
+*.log
+*.out
+*.err
+
+# Éditeurs et environnements de développement
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers temporaires
+/tmp/
+
+# Couverture de code
+*.profraw
+
+# Binary files
+*.exe
+*.dll
+*.dylib
+*.so

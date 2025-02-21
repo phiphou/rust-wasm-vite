@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+/* Conteneur principal avec une disposition en ligne */
+body {
+  overflow: hidden;
+}
+
+/* Style pour le canvas */
+.canvas {
+  display: block; /* Pour supprimer les marges par défaut */
+  width: 100%; /* Prendre toute la largeur disponible */
+  height: 100%; /* Prendre toute la hauteur disponible */
+}
