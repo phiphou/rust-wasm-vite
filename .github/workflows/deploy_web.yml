@@ -26,8 +26,7 @@ jobs:
         run: cd game_of_life/
           chmod +x build-wasm.sh && ./build-wasm.sh
       - name: Build static site
-        run: cd game_of_life_web/www/
-          pnpm run build
+        run: cd game_of_life_web/www/ && pnpm run build
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
