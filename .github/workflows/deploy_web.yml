@@ -23,8 +23,7 @@ jobs:
         with:
           version: 'latest'
       - name: Build WASM package
-        run: cd game_of_life/
-          chmod +x build-wasm.sh && ./build-wasm.sh
+        run: cd game_of_life/ && chmod +x build-wasm.sh && ./build-wasm.sh
       - name: Build static site
         run: cd game_of_life_web/www/ && pnpm run build
       - name: Deploy to gh-pages
