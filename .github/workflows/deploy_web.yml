@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
+      - uses: pnpm/action-setup@v4.1.0
+        with:
+          version: 10.4.1
+          run_install: true
       - uses: jetli/wasm-pack-action@v0.4.0
         with:
           version: 'latest'
@@ -27,8 +31,7 @@ jobs:
       - name: Build static site
         run: |
           cd game_of_life_web/www/
-          npm ci
-          npm run build
+          pnpm run build
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
